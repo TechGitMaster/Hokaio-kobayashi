@@ -1,0 +1,744 @@
+.moth{
+    background: white;
+    padding:0px;
+    margin: 0px;
+}
+
+.navigation{
+    padding-top:20px;
+    padding-bottom: 20px;
+}
+
+.navigation-F{
+    min-width:100%;
+    min-height:47px;
+    border-radius:50px;
+    background:#D88B00;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.476);
+    overflow: hidden;
+    padding-left:30px;
+    padding-right: 30px;
+    display:flex;
+}
+
+.navigationSelect{
+    width:100%;
+    display:flex;
+    justify-content: space-between;
+}
+
+.titleHeader{
+    width:100%;
+}
+
+.home{
+    padding:0px;
+    margin: 0px;
+    background: url('/assets/characters/backgroundSHome.jpg') no-repeat center center fixed;
+    background-size:cover;
+}
+
+
+.homeWithB{
+    background: rgba(101, 97, 67, 0.408);
+}
+
+.firstTitle{
+    min-height: 100%;
+    padding-top:13px;
+    padding-bottom:10px;
+    font-family: ravie;
+    font-size: 15px;
+    color:rgb(255, 255, 255);
+}
+
+.navigationL{
+    padding-top:13px;
+    padding-bottom:10px;
+    text-align: center;
+    font-size: 15px;
+    cursor: pointer;
+    font-family: ravie;
+    color: #1d1d25;
+}
+
+.charactersDisplay{
+    transition: all ease-in 0.2s;
+    opacity: 1;
+}
+
+.dsd{
+    justify-content: center;
+    display: flex;
+    align-items: center;
+}
+
+.characters{
+    min-height:500px;
+}
+
+.imgCharacter{
+    height:500px;
+}
+
+.infoCharac{
+    padding-top:20px;
+}
+
+.Characteristics{
+    font-size:20px;
+    font-weight: 500;    
+}
+
+.cA{
+    padding:0px;
+    margin:0px;
+    font-size: 17px;
+}
+
+.cT{
+    font-weight: 700;
+    font-size: 17px;
+}
+
+.nameCharac{
+    font-weight:900;
+    font-family:Arial, Helvetica, sans-serif;
+    font-size:30px;
+}
+
+.informationCharac{
+    text-align: justify;
+}
+
+.chrackInfo{
+    transition: all ease-in 0.2s;
+    opacity: 1;
+}
+
+.rowNaviCharact{
+    margin-top:10px;
+    padding-bottom:5px;
+    overflow:hidden;
+}
+
+.imgcharact{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding:5px;
+}
+
+.imgcharactFinal{
+    border-radius: 20px;
+    box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.639);
+    overflow: hidden;
+    position: relative;
+}
+
+.imgCC{
+    min-height:280px;
+    object-fit:cover;
+}
+
+.colCharact{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    padding:10px;
+    cursor: pointer;
+}
+
+.charactersDiv{
+    width:100px;
+    height:100px;
+    margin-top:10px;
+    transition: all ease-in 0.1s;
+    justify-content: center;
+    display: flex;
+    position: relative;
+}
+
+.imgCharacSelect{
+    min-width: 100%;
+    min-height: 100%;
+    object-fit: cover;
+    border-radius: 50px;
+    box-shadow: 0px 0px 5px black;
+}
+
+.nameCharactSelect{
+    min-width: 100px;
+    min-height: 100px;
+    background: rgba(0, 0, 0, 0.442);
+    border-radius: 50%;
+    z-index:1;
+    transition:all ease-in 0.1s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+}
+
+.spanNameC{
+    color:white;
+    font-weight: 700;
+    font-size: 17px;
+}
+
+.textHomeD{
+    min-height:100%;
+    padding-top:50px;
+    padding-bottom:50px;
+    display: flex;
+    align-items: center;
+}
+
+.textH{
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    text-shadow: 0px 0px 2px rgb(0, 0, 0);
+    font-size: 38px;
+    color:rgb(255, 255, 255);
+}
+
+.btnPageVisit{
+    border-radius: 50px;
+    background: #2B2C3F;
+    color:white;
+    border:none;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.544);
+    padding:15px;
+    font-size:21px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.imgForVidD{
+    min-height:630px;
+    overflow:hidden;
+    position:relative;
+}
+
+.FimgForVId{
+    min-width:100%;
+    min-height:520px;
+    border-top-left-radius: 30px;
+    border-top-right-radius: 30px;
+    background: rgba(117, 65, 61, 0.58);
+    padding-top:10px;
+    position:absolute;                 
+    bottom:0;                         
+    left:0;
+}
+
+.colImgDH{
+    padding:0px;
+}
+
+.radiColumn{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.VidImageIconH{
+    padding:5px;
+    display: flex;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.imgIconH{
+    max-width: 100%;
+    max-height: 100%;
+    border-radius:50%;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.823);
+}
+
+.rowForSelectedHI{
+    padding-left: 30px;
+    padding-right: 30px;  
+}
+
+.dFHV{
+    min-width: 100%;
+    height:380px;
+    margin-top:20px;
+    margin-bottom:20px;
+    -moz-border-radius: 15px;
+    overflow: hidden;
+    border-radius:30px;
+    box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.714);
+}
+
+.aboutF{
+    min-width:100%;
+    padding-top:80px;
+    padding-bottom:150px;
+    z-index:10;
+    position: relative;
+}
+
+.aboutDM{
+    display: flex;
+    justify-content: center;
+}
+
+.introA{
+    max-width:430px;
+    max-height:160px;
+    padding:0px;
+}
+
+.imageIntroA{
+    min-width:100%;
+    min-height:100%;
+}
+
+.characDiv{
+    z-index:10;
+    padding-top:20px;
+    padding-bottom:20px;
+    background: white;
+    position: relative;
+}
+
+.landingAbout{
+    background: rgb(255, 255, 255);
+    
+}
+
+.landing2About{
+    background:url('/assets/background/asd.png');
+}
+
+.AboutINFO{
+    display:flex;
+    justify-content: center;
+}
+
+.aboutInfos2{
+    background:url('/assets/background/asd.png');
+}
+
+.infoAboutImD{
+    max-width:760px;
+    background: rgba(255, 255, 255, 0.578);
+    border-radius:10px;
+}
+
+.infoA{
+    text-align: center;
+    max-width: 800px;
+    max-height:100%;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size:20px;
+    text-shadow: 0px 0px 1px black;
+}
+
+.containAbout{
+    margin:0 auto;
+    position:relative;
+}
+
+.img1{
+    width:370px;
+    position: absolute;
+    top:-150px;left:-80px;
+}
+
+.img2{
+    transform:rotateY(180deg);
+    width:280px;
+    position: absolute;   
+    right:-60px;                  
+    bottom:0px;
+    top:-430px;
+}
+
+.asd{
+    position:relative;
+}
+
+.bbb{
+    position:relative; 
+}
+
+
+.fluidSeasons{
+    background:#201f3b;
+}
+
+.seasonContainer{
+    padding-top:20px;
+    padding-bottom:20px;
+}
+
+.rowSeson{
+    padding-left: 100px;
+    padding-right:100px; 
+}
+
+.imgseason{
+    max-width: 100%;
+    max-height: 340px;
+    object-fit: cover;
+}
+
+.divSeasonPic{
+   display: flex;
+   justify-content: center; 
+}
+
+.titleText{
+    font-family: sans-serif;
+    color:white;
+    font-size:26px;
+}
+
+.titleTextjapanese{
+    font-family: sans-serif;
+    color:rgb(209, 209, 209);
+    font-weight: 700;
+    font-size:18px;
+}
+
+.infoTitle{
+    color:white;
+}
+
+.typeOfTitle{
+    padding:0px;
+    margin:0px;
+    padding-left:13px;
+}
+
+.first{
+    color: white;
+    font-weight: 700;
+    font-size: 14px;
+}
+
+.second{
+    color: white;
+    font-size: 14px;
+}
+
+.relationDivT{
+    margin-top:20px;
+    padding-left:100px;
+    padding-right:100px;
+}
+
+.relationBorder{
+    padding:11px;
+    color:white;
+    font-size:18px;
+    font-weight: 300;
+    background: rgb(137, 68, 36);
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+
+.selectionD{
+    padding:10px;
+}
+
+.hoverRS{
+    min-width:100%;
+    min-height:100%;
+    background: rgba(0, 0, 0, 0.51);
+    z-index:1;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    color:white;
+    font-weight: 500;
+    font-size:20px;
+    opacity:0.0;
+    position:absolute;
+}
+
+.selectionDF{
+    cursor: pointer;
+    border-radius:5px;
+    overflow:hidden;
+    box-shadow:0px 0px 10px rgb(39, 39, 39);
+    position:relative;
+}
+
+.rsImage{
+    min-width:100%;
+    height:200px;
+    object-fit: cover;
+}
+
+.containHonkaio{
+    min-height:100%;
+    background:#af7406;
+    justify-content: center;
+    display: flex;
+    align-items:center;
+    padding-top:20px;
+    padding-bottom:20px;
+}
+
+.honkaiDiv{
+    max-width:100px;
+    max-height:100px;
+    border-radius:50%;
+    overflow:hidden;
+    box-shadow: 0px 0px 5px rgb(3, 3, 3);
+}
+
+.divHonkai{
+    justify-content: center;
+    display:flex;
+    align-items: center;
+}
+
+.pHonkaio{
+    color:white;
+    font-size:17px;
+    font-weight: 500;
+    padding:0px;
+    margin:0px;
+}
+
+.textHs{
+    display:none;
+}
+
+
+
+
+/*_______________________________________@ MEDIA___________________________________________*/
+
+@media (max-width:415px){
+    .selectionD{
+        margin-top:5px;
+        margin-bottom:5px;
+        padding:0px;
+    }
+}
+
+
+@media (max-width:440px){
+    .imgCharacter{
+        width:100%;
+        height:350px;
+    }
+
+    .spanNameC{
+        color:white;
+        font-weight: 700;
+        font-size: 12px;
+    }
+
+    .rowSeson{
+        padding-left: 10px;
+        padding-right:10px; 
+    }
+
+    .textHs{
+        padding-left:5px;
+        padding-right:5px;
+        display:block;
+        font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        text-shadow: 0px 0px 2px rgb(0, 0, 0);
+        font-size: 27px;
+        color:rgb(255, 255, 255);
+        text-align: center;
+    }
+
+    .textH{
+        display:none;   
+    }
+
+    .colImgDH{
+        margin:0px;
+        padding:0px;
+    }
+}
+
+@media (max-width: 850px){
+
+    .homeWithB{
+        background: rgba(101, 97, 67, 0.408);
+        padding:0px;
+        margin:0px;
+    }
+
+    .navigation-F{
+        min-width:100%;
+        min-height:47px;
+        border-radius: 0px;
+        background:#D88B00;
+        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.476);
+        overflow: hidden;
+        padding-left:30px;
+        padding-right: 30px;
+        display:flex;
+    }
+    
+    .navigation{
+        padding:0px;
+    }
+}
+
+@media (max-width:792px){
+    .navigationSelect{
+        display: none;
+    }
+
+    .firstTitle{
+        min-height: 100%;
+        padding-top:13px;
+        padding-bottom:10px;
+        font-family: ravie;
+        font-size: 15px;
+        text-align: center;
+        color:rgb(255, 255, 255);
+    }
+}
+
+@media (max-width:751px){
+    .containSelection{
+        min-width:100%;
+        padding:0px;
+        overflow: hidden;
+    }
+
+    .imgForVidD{
+        overflow: hidden;
+        height:680px;
+        position: relative;
+    }
+    
+    .FimgForVId{
+        width:100%;
+        border-top-left-radius: 30px;
+        border-top-right-radius: 30px;
+        background: rgba(117, 65, 61, 0.58);
+        padding-top:10px;
+    }
+
+   .titleDiv{
+       margin-top:15px;
+   }
+
+   .typeOfTitle{
+        padding:0px;
+        margin:0px;
+    }
+}
+
+@media (max-width:980px){
+    .textH{
+        
+        font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        text-shadow: 0px 0px 2px rgb(0, 0, 0);
+        font-size: 34px;
+        color:rgb(255, 255, 255);
+        text-align: center;
+    }
+
+    .btnPageVisit{
+        border-radius: 50px;
+        background: #2B2C3F;
+        color:white;
+        border:none;
+        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.544);
+        padding:15px;
+        font-size:16px;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+    
+    .divBtnVisit{
+        display:flex;
+        justify-content: center;
+    }
+
+    .containNavi{
+        min-width: 100%;
+        padding:0px;
+        margin:0px;
+    }
+}
+
+
+@media (max-width:1000px){
+    .img1{
+        display:none;                 
+    }
+
+    .rowSeson{
+        padding-left: 10px;
+        padding-right:10px; 
+    }
+}
+
+@media (max-width:1190.98px){
+    .rowSeson{
+        padding-left: 10px;
+        padding-right:10px; 
+    }    
+
+    .relationDivT{
+        margin-top:20px;
+        padding-left:10px;
+        padding-right:10px;
+    }
+
+    .seasonContainer{
+        min-width: 100%;
+        padding-top:20px;
+        padding-bottom:20px;
+    }
+}
+
+
+@media (max-width:1213px){
+    .charactersDiv{
+        width:80px;
+        height:80px;
+        margin-top:10px;
+        transition: all ease-in 0.1s;
+        justify-content: center;
+        display: flex;
+        position: relative;
+    }
+
+    .nameCharactSelect{
+        min-width: 80px;
+        min-height: 80px;
+        background: rgba(0, 0, 0, 0.442);
+        transition: all ease-in 0.1s;
+        border-radius: 50%;
+        z-index:1;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: absolute;
+    }
+
+}
+
+@media (max-width:1268.80px){
+    .img2{
+        display:none;                 
+    }
+
+    .characDiv{
+        min-width:100%;
+        z-index:10;
+        padding-top:20px;
+        padding-bottom:20px;
+        background: white;
+        position: relative;
+    }
+
+}
+
+
+
