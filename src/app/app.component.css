@@ -350,13 +350,14 @@
 .img2{
     transform:rotateY(180deg);
     width:280px;
-    position: absolute;   
+    position: absolute; 
     right:-60px;                  
     bottom:0px;
     top:-430px;
 }
 
 .asd{
+    z-index:11;
     position:relative;
 }
 
