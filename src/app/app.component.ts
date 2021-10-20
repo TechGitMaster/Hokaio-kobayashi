@@ -1,5 +1,7 @@
 import { Component, Input, AfterViewInit, OnInit } from '@angular/core';
 import { DomSanitizer } from '@angular/platform-browser';
+import { Observable, Subscription } from 'rxjs';
+import { HttpClient } from '@angular/common/http';
 
 @Component({
   selector: 'app-root',
@@ -14,9 +16,12 @@ export class AppComponent implements OnInit  {
   stLink!: any;
   numStayCharact: number = 0;
   numHome: number = 0;
-  srcImage: string = '/assets/characters/tohru.png';
+  srcImage: any = '/assets/characters/tohru.png';
   nameCharacter: string = 'Tohru';
   controls: string = "?rel=0&modestbranding=1&autohide=1&showinfo=0&controls=0&autoplay=1";
+  obersavleImage!: Observable<any>;
+  subscription!: Subscription;
+  loadImage!: string;
 
 
   //Characters______________________________________________________________
@@ -106,7 +111,7 @@ export class AppComponent implements OnInit  {
   
 
 
-  constructor(private dom: DomSanitizer){}
+  constructor(private dom: DomSanitizer, private http: HttpClient){}
 
   ngOnInit(): void {
     this.stLink = this.dom.bypassSecurityTrustResourceUrl('https://www.youtube.com/embed/7B0PaZHRcyw'+this.controls);
@@ -129,14 +134,53 @@ export class AppComponent implements OnInit  {
   //Characters ICON______________________________________________________________
   clickedCharact(num: number, query: string){
     if(this.numStayCharact != num){
-      this.numStayCharact = num;
-      this.srcImage = this.array[this.numStayCharact][2];
-      this.nameCharacter = this.array[this.numStayCharact][3];
-      this.characterInfo = this.array[this.numStayCharact][4];
 
-      this.arrayCharacteristics = this.array[this.numStayCharact][5];
+      const doc1 = document.querySelector('.charactersDisplay');
+      const doc2 = document.querySelector('.chrackInfo');
 
-      document.getElementById(query)?.scrollIntoView();
+      const query1 = <HTMLDivElement>doc1;
+      const query2 = <HTMLDivElement>doc2;
+
+      query1.style.opacity = "0.0";
+      query2.style.opacity = "0.0";
+ 
+
+      //Get image using observable___________________________________________________________________
+      this.obersavleImage = this.http.get(this.array[num][2], { responseType: 'blob' });
+
+
+      setTimeout(() => {
+
+        this.srcImage = "";
+        this.loadImage = '/assets/loading/loading.svg';        
+
+        this.numStayCharact = num;
+        this.nameCharacter = this.array[this.numStayCharact][3];
+        this.characterInfo = this.array[this.numStayCharact][4];
+        this.arrayCharacteristics = this.array[this.numStayCharact][5];
+
+        query1.style.opacity = "1";
+        query2.style.opacity = "1";
+
+
+        //Subscription to get blob image__________________________________________________________
+        this.subscription = this.obersavleImage.subscribe((data: any) => {
+      
+          //convert Blob to image temporary url______________________________________
+          var image = this.dom.bypassSecurityTrustUrl(URL.createObjectURL(data));
+
+          this.loadImage = '';
+
+          setTimeout(() => {
+            this.srcImage = image;
+          }, 100);
+
+          this.subscription.unsubscribe();
+  
+        });
+        
+        document.getElementById(query)?.scrollIntoView();
+      }, 200);
     } 
   }
 
