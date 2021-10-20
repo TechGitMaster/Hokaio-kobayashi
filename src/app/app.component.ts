@@ -129,27 +129,14 @@ export class AppComponent implements OnInit  {
   //Characters ICON______________________________________________________________
   clickedCharact(num: number, query: string){
     if(this.numStayCharact != num){
-      const doc1 = document.querySelector('.charactersDisplay');
-      const doc2 = document.querySelector('.chrackInfo');
+      this.numStayCharact = num;
+      this.srcImage = this.array[this.numStayCharact][2];
+      this.nameCharacter = this.array[this.numStayCharact][3];
+      this.characterInfo = this.array[this.numStayCharact][4];
 
-      const query1 = <HTMLDivElement>doc1;
-      const query2 = <HTMLDivElement>doc2;
+      this.arrayCharacteristics = this.array[this.numStayCharact][5];
 
-      query1.style.opacity = "0.0";
-      query2.style.opacity = "0.0";
-
-      setTimeout(() => {
-        this.numStayCharact = num;
-        this.srcImage = this.array[this.numStayCharact][2];
-        this.nameCharacter = this.array[this.numStayCharact][3];
-        this.characterInfo = this.array[this.numStayCharact][4];
-
-        this.arrayCharacteristics = this.array[this.numStayCharact][5];
-
-        query1.style.opacity = "1";
-        query2.style.opacity = "1";
-        document.getElementById(query)?.scrollIntoView();
-      }, 200);
+      document.getElementById(query)?.scrollIntoView();
     } 
   }
 
