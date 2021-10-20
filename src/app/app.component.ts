@@ -1,4 +1,4 @@
-import { Component, Input, AfterViewInit, OnInit } from '@angular/core';
+import { Component, Input, AfterViewInit, OnInit, HostListener } from '@angular/core';
 import { DomSanitizer } from '@angular/platform-browser';
 import { Observable, Subscription } from 'rxjs';
 import { HttpClient } from '@angular/common/http';
@@ -10,9 +10,14 @@ import { HttpClient } from '@angular/common/http';
 })
 export class AppComponent implements OnInit  {
 
-
+  innerWidth!: any;
+  @HostListener('window:resize', ['$event'])
+  onResize() {
+    this.innerWidth = window.innerWidth;
+  }
 
   
+  conditionShowCharact: boolean = true;
   stLink!: any;
   numStayCharact: number = 0;
   numHome: number = 0;
@@ -135,14 +140,19 @@ export class AppComponent implements OnInit  {
   clickedCharact(num: number, query: string){
     if(this.numStayCharact != num){
 
+      this.conditionShowCharact = false;
+
       const doc1 = document.querySelector('.charactersDisplay');
       const doc2 = document.querySelector('.chrackInfo');
+      const doc3 = document.querySelector('.divLoad');
 
       const query1 = <HTMLDivElement>doc1;
       const query2 = <HTMLDivElement>doc2;
+      const query3 = <HTMLDivElement>doc3;
 
       query1.style.opacity = "0.0";
       query2.style.opacity = "0.0";
+      query3.style.display = "block";
  
 
       //Get image using observable___________________________________________________________________
@@ -169,11 +179,15 @@ export class AppComponent implements OnInit  {
           //convert Blob to image temporary url______________________________________
           var image = this.dom.bypassSecurityTrustUrl(URL.createObjectURL(data));
 
+          
           this.loadImage = '';
+          query3.style.display = "none";
 
           setTimeout(() => {
+            this.conditionShowCharact = true;
             this.srcImage = image;
-          }, 100);
+            document.getElementById(query)?.scrollIntoView();
+          }, 200);
 
           this.subscription.unsubscribe();
   

@@ -63,7 +63,7 @@
                                             <div class="col-lg-3 col-md-3 col-sm-4 col-4 p-0 radiColumn mx-auto " 
                                             *ngFor="let arrH of arrayH; index as numH">
                                                 <div [ngClass]="['VidImageIconH', 'ImgIH'+numH]" 
-                                                [ngStyle]="{'min-width': (numH > 0 ? '97px':'110px'),
+                                                [ngStyle]="{'width': (numH > 0 ? '97px':'110px'),
                                                     'height':(numH > 0 ? '97px':'110px') }"
                                                 (click)="clickHIcon(numH)" >
                                                     <img [src]="arrH[0]" class="img-fluid imgIconH" />
@@ -145,10 +145,11 @@
             <div class="characters">
                 <div class="row">
                     <div class="col-lg-6 col-md-6 col-sm-12 col-12 dsd">
-                        <div class="charactersDisplay bg-primary">
-                            <div class="divLoad">
-                                <img [src]="loadImage" class="img-fluid loading" />
-                            </div>
+                        <div class="divLoad">
+                            <img [src]="loadImage" class="img-fluid loading" />
+                        </div>
+                        <div class="adjust"></div>
+                        <div class="charactersDisplay" *ngIf="conditionShowCharact">
                             <img [src]="srcImage" class="img-fluid imgCharacter" />
                         </div>
                     </div>

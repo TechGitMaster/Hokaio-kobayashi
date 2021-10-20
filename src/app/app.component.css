@@ -251,7 +251,6 @@
 
 .imgIconH{
     width: 100%;
-    height: 100%;
     border-radius:50%;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.823);
 }
@@ -343,7 +342,7 @@
 }
 
 .img1{
-    width:400px;
+    width:385px;
     position: absolute;
     top:-150px;left:-100px;
 }
@@ -512,12 +511,16 @@
 }
 
 .divLoad{
-    width: 100%;
-    height:100%;
+    background:white;
     display:flex;
+    display:none;
     justify-content:center;
     align-items:center;
     position:absolute;
+}
+
+.adjust{
+    margin-bottom:50px;
 }
 
 .loading{
