@@ -117,6 +117,12 @@ export class AppComponent implements OnInit  {
     this.stLink = this.dom.bypassSecurityTrustResourceUrl('https://www.youtube.com/embed/7B0PaZHRcyw'+this.controls);
   }
 
+  
+  //Link page______________________________________________________________
+  linkedPage(){
+    window.location.replace('http://www.kyotoanimation.co.jp/en/');
+  }
+
   //Characters______________________________________________________________
   MouseOverOutCharact(arrCount: number, condition: boolean){
     const doc = document.querySelector('.numCon'+arrCount);
