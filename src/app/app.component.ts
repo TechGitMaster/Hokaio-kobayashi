@@ -10,11 +10,7 @@ import { HttpClient } from '@angular/common/http';
 })
 export class AppComponent implements OnInit  {
 
-  innerWidth!: any;
-  @HostListener('window:resize', ['$event'])
-  onResize() {
-    this.innerWidth = window.innerWidth;
-  }
+  
 
   
   conditionShowCharact: boolean = true;
@@ -26,7 +22,6 @@ export class AppComponent implements OnInit  {
   controls: string = "?rel=0&modestbranding=1&autohide=1&showinfo=0&controls=0&autoplay=1";
   obersavleImage!: Observable<any>;
   subscription!: Subscription;
-  loadImage!: string;
 
 
   //Characters______________________________________________________________
@@ -162,7 +157,7 @@ export class AppComponent implements OnInit  {
       setTimeout(() => {
 
         this.srcImage = "";
-        this.loadImage = '/assets/loading/loading.svg';        
+ 
 
         this.numStayCharact = num;
         this.nameCharacter = this.array[this.numStayCharact][3];
@@ -179,8 +174,7 @@ export class AppComponent implements OnInit  {
           //convert Blob to image temporary url______________________________________
           var image = this.dom.bypassSecurityTrustUrl(URL.createObjectURL(data));
 
-          
-          this.loadImage = '';
+    
           query3.style.display = "none";
 
           setTimeout(() => {
