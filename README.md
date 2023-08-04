@@ -1,5 +1,8 @@
 # Hokaio-Kobayashi
 
+![ReduceImageSize net_33%_4875](https://github.com/TechGitMaster/Hokaio-kobayashi/assets/52535645/0c24979a-08b1-4a8c-9d32-91e676873a3d)
+
+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 12.2.7.
 
 ## Development server
